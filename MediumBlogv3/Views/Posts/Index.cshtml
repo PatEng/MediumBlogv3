@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MediumBlogv3.Models.Post>
+
+@{
+    ViewBag.Title = "View All Posts";
+    var count = 0;
+}
+
+<h1>View All Posts</h1>
+
+<div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-2">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        @using (Html.BeginForm("Index", "Posts", FormMethod.Get))
+        {
+        <label>Filter by Tag:</label> @Html.DropDownList("Tag", "All")
+        <input type="submit" value="Filter" />
+        <input type="hidden" name="Search" id="search" value="@ViewBag.Search" />
+        }
+    </div>
+    
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        @using (Html.BeginForm("Index", "Posts", FormMethod.Get))
+        {
+        <label>Filter by Blog:</label> @Html.DropDownList("Blog", "All")
+        <input type="submit" value="Filter" />
+        }
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2">
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-2">
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-8">
+        <br />
+        <h2 class="text-center">@Html.ActionLink("Create a New Post", "Create", null, new { @class = "btn btn-primary btn-lg btn-block wow bounce" })</h2>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2">
+    </div>
+</div>
+<div class="row"> 
+@foreach (var item in Model)
+{ 
+    <div class="col-lg-4 col-md-4 col-sm-6">
+        <h2 class="lead">@item.Title</h2>
+        <img class="thumbnail" src="@item.FeaturedImageURL" alt="@item.Title" />
+        <p class="text-center">Published on @item.Date by @item.Author.AuthorName</p>
+        <p class="text-center">
+            @Html.ActionLink("Read More", "Details", new { id = item.PostID }, new { @class = "btn btn-success" })
+        </p>
+        @if (User.IsInRole("Admin") && User.Identity.IsAuthenticated)
+        {
+        <p class="text-center">@Html.ActionLink("Delete This Post", "Delete", new { id = item.PostID }, new { @class="btn btn-danger"})</p>
+        }
+    </div>
+    count++;
+}
+</div>             

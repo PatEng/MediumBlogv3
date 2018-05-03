@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+</div>
+<div class="hero-container">
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hero-text">
+                    <h1 class="modal-title" style="text-align: center">Welcome to Rare, a platform to share your thoughts</h1><br/>
+                    <p class="text-center">@Html.ActionLink("Browse Some Posts", "Index", "Posts", new { @class = "btn btn-lg btn-primary"})<p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container body-content">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 wow zoomInUp">
+            <img class="full-image" src="https://cdn-images-1.medium.com/proxy/1*vAvULJPUoFIVXyHQZ4obxg.gif">
+            <h2 style="text-align: center;">Ideas and perspectives you won’t find anywhere else.</h2><br/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 wow bounceInLeft">
+            <img class="thumbnail" src="https://www.brookings.edu/wp-content/uploads/2017/11/metro_20171121_tech-empowers-tech-polarizes-mark-muro.jpg" alt="Technology posts" />
+            <h2>Posts About Technology</h2>
+            <p>
+                Technology ("science of craft", from Greek τέχνη, techne, "art, skill, cunning of hand"; and -λογία, -logia) is the collection of techniques, skills, methods, and processes used in the production of goods or services or in the accomplishment of objectives, such as scientific investigation. Technology can be the knowledge of techniques, processes, and the like, or it can be embedded in machines to allow for operation without detailed knowledge of their workings.
+            </p>
+            <p><a class="btn btn-default" href="/Posts/Index?tag=Technology">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4 wow bounceInUp">
+            <img class="thumbnail" src="https://www.aoc.gov/sites/default/files/images/buildings/6080137063_3e6c91ee8b_o.jpg" alt="Political posts" />
+            <h2>Posts About Politics</h2>
+            <p>Politics (from Greek: πολιτικά, translit. Politiká, meaning "affairs of the cities") is the process of making decisions that apply to members of a group.</p>
+            <p><a class="btn btn-default" href="/Posts/Index?tag=Politics">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4 wow bounceInRight">
+            <img class="thumbnail" src="https://www.diygenius.com/wp-content/uploads/2014/10/creativity-accelerators-759x500.jpg" alt="Creativity posts" />
+            <h2>Posts About Creativity</h2>
+            <p>Creativity is a phenomenon whereby something new and somehow valuable is formed. The created item may be intangible (such as an idea, a scientific theory, a musical composition, or a joke) or a physical object (such as an invention, a literary work, or a painting).</p>
+            <p><a class="btn btn-default" href="/Posts/Index?tag=Creativity">Learn more &raquo;</a></p>
+        </div>
+    </div>

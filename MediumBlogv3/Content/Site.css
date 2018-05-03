@@ -1,0 +1,66 @@
+﻿body {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.hero-container {
+    min-height: 600px;
+    background-image: url("https://cdn.cnn.com/cnnnext/dam/assets/121029023129-01-ny-braces-sandy-horizontal-large-gallery.jpg");
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: cover;
+    z-index: -1;
+    margin-bottom: 40px;
+}
+
+.hero-text {
+    padding: 200px 0;
+    color: #ffffff;
+}
+
+.logo {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+video#bgvideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+}
+
+.full-image{
+    width: 100%;
+    height: auto;
+}
+
+.thumbnail{
+    max-height: 190px;
+}
